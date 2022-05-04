@@ -1,0 +1,82 @@
+[
+  {
+    "PK": "ORD#ENK#104314351",
+    "SK": "0",
+    "dataPartition": "ENK",
+    "stages": [
+      {
+        "name": "PROCESS",
+        "number": "PROCESS",
+        "description": "PROCESS",
+        "userFields": [],
+        "id": "afb81fa6-bf6e-45a6-aecd-dc25c817d3e2",
+        "operations": []
+      }
+    ],
+    "processOrderType": "ZVPL",
+    "site": "ENK",
+    "state": "initial",
+    "baseQuantity": "1.000",
+    "processOrder": "104314351",
+    "stateHistory": [],
+    "CAT": "ORD",
+    "longText": null,
+    "plant": "1268",
+    "id": "55ff95f0-c12d-4840-bed6-8e0c34f9fe9c",
+    "prodSchedDesc": "Decoding",
+    "orderTemplate": "DEFAULT",
+    "prodSchedCode": "016",
+    "outputMaterialUom": "KG",
+    "inputMaterialUom": "KG",
+    "REV": "1-cky939okg0004hgmp7dedchjj",
+    "outputBatches": [
+      "0212102273"
+    ],
+    "baseUom": "KG",
+    "startTime": null,
+    "outputMaterialDesc": "VTA.GOSTAR.SEMI.100.000.000",
+    "endTime": null,
+    "createdOn": null,
+    "inputBatches": [
+      "0180750035"
+    ],
+    "description": null,
+    "outputMaterial": "11992972"
+  },
+  {
+    "PK": "SUM#ENK#initial",
+    "SK": "cky939okg0004hgmp7dedchjj#104314351",
+    "dataPartition": "ENK",
+    "totalOperations": 0,
+    "processOrderType": "ZVPL",
+    "site": "ENK",
+    "state": "initial",
+    "baseQuantity": "1.000",
+    "processOrder": "104314351",
+    "CAT": "SUM",
+    "longText": null,
+    "plant": "1268",
+    "id": "55ff95f0-c12d-4840-bed6-8e0c34f9fe9c",
+    "prodSchedDesc": "Decoding",
+    "orderTemplate": "DEFAULT",
+    "prodSchedCode": "016",
+    "outputMaterialUom": "KG",
+    "inputMaterialUom": "KG",
+    "REV": "1-cky939okg0004hgmp7dedchjj",
+    "outputBatches": [
+      "0212102273"
+    ],
+    "baseUom": "KG",
+    "completedOperations": 0,
+    "startTime": null,
+    "outputMaterialDesc": "VTA.GOSTAR.SEMI.100.000.000",
+    "endTime": null,
+    "createdOn": null,
+    "inputBatches": [
+      "0180750035"
+    ],
+    "currentOperations": [],
+    "description": null,
+    "outputMaterial": "11992972"
+  }
+]

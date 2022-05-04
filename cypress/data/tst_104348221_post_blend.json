@@ -1,0 +1,781 @@
+[
+  {
+    "PK": "ORD#ENK#104348221",
+    "SK": "0",
+    "dataPartition": "ENK",
+    "stages": [
+      {
+        "name": "PROCESS",
+        "number": "PROCESS",
+        "description": "PROCESS",
+        "userFields": [],
+        "id": "07498209-cdce-48c7-8c56-ed9c7646cf17",
+        "operations": []
+      }
+    ],
+    "processOrderType": "ZVPL",
+    "site": "ENK",
+    "state": "initial",
+    "baseQuantity": "1.380",
+    "processOrder": "104348221",
+    "stateHistory": [],
+    "CAT": "ORD",
+    "longText": "BLEND OPN PEPPER",
+    "plant": "1268",
+    "id": "ad5292eb-8b10-4e38-9286-8b83bdf9ca21",
+    "prodSchedDesc": "Blending",
+    "orderTemplate": "DEFAULT",
+    "prodSchedCode": "012",
+    "outputMaterialUom": "KG",
+    "inputMaterialUom": "KG",
+    "REV": "1-cky939ovq0006hgmpg02gehon",
+    "outputBatches": [
+      "0212815648"
+    ],
+    "baseUom": "KG",
+    "startTime": null,
+    "outputMaterialDesc": "VTS.KAPTUR.SEMI.100.000.000",
+    "endTime": null,
+    "createdOn": "10/08/2021",
+    "inputBatches": [
+      "0211729575",
+      "0211905602"
+    ],
+    "description": "BLEND OPN PEPPER",
+    "outputMaterial": "11147891"
+  },
+  {
+    "PK": "SUM#ENK#in-progress",
+    "SK": "cl1ccqmdk000808mne3v7beyg#104348221",
+    "dataPartition": "ENK",
+    "totalOperations": 1,
+    "processOrderType": "ZVPL",
+    "site": "ENK",
+    "state": "in-progress",
+    "baseQuantity": "1.380",
+    "processOrder": "104348221",
+    "CAT": "SUM",
+    "longText": "BLEND OPN PEPPER",
+    "plant": "1268",
+    "id": "ad5292eb-8b10-4e38-9286-8b83bdf9ca21",
+    "prodSchedDesc": "Blending",
+    "orderTemplate": "DEFAULT",
+    "prodSchedCode": "012",
+    "outputMaterialUom": "KG",
+    "inputMaterialUom": "KG",
+    "REV": "4-cl1ccqmdk000808mne3v7beyg",
+    "outputBatches": [
+      "0212815648"
+    ],
+    "previousState": "in-progress",
+    "baseUom": "KG",
+    "completedOperations": 1,
+    "startTime": 1648571196510,
+    "PREV_REV": "3-cl1ccqfnl000708mn35tpa1x1",
+    "outputMaterialDesc": "VTS.KAPTUR.SEMI.100.000.000",
+    "endTime": null,
+    "createdOn": "10/08/2021",
+    "inputBatches": [
+      "0211729575",
+      "0211905602"
+    ],
+    "currentOperations": [
+      {
+        "number": "",
+        "operationDefinitionId": "94b035e8-9f01-4369-9832-c11126bac4c7",
+        "userFields": [],
+        "createTime": 1648571196506,
+        "name": "Blending",
+        "description": "",
+        "startTime": 1648571204753,
+        "id": "1a966d27-ac0b-4133-a216-afdc53dd31c5",
+        "state": "complete",
+        "endTime": 1648571213149,
+        "equipmentId": "51f93aa3-1c22-4286-9b66-864f00fbb692"
+      }
+    ],
+    "description": "BLEND OPN PEPPER",
+    "outputMaterial": "11147891"
+  },
+  {
+    "PK": "ORD#ENK#104348221",
+    "SK": "cl1ccq9b8000608mn39yx4zk8",
+    "PREV_REV": "1-cky939ovq0006hgmpg02gehon",
+    "PATCH_DATE": 1648571202981,
+    "REV": "2-cl1ccq9b8000608mn39yx4zk8",
+    "API_PATCH_ACTION": "add-operation",
+    "CAT": "ORD",
+    "patches": [
+      {
+        "op": "add",
+        "path": [
+          "stages",
+          0,
+          "operations",
+          0
+        ],
+        "value": {
+          "operationDefinitionId": "94b035e8-9f01-4369-9832-c11126bac4c7",
+          "actionGroups": [
+            {
+              "number": "BLEND_OPERATION_START",
+              "guardedState": "in-progress",
+              "label": "Start"
+            },
+            {
+              "number": "BLEND_OPERATION_STOP",
+              "guardedState": "complete",
+              "label": "Complete"
+            }
+          ],
+          "description": "",
+          "equipmentId": "51f93aa3-1c22-4286-9b66-864f00fbb692",
+          "stateHistory": [
+            {
+              "user": "john.bell1.ext@bayer.com",
+              "startTime": 1648571196506,
+              "state": "initial"
+            }
+          ],
+          "number": "",
+          "userFields": [],
+          "createTime": 1648571196506,
+          "name": "Blending",
+          "startTime": null,
+          "id": "1a966d27-ac0b-4133-a216-afdc53dd31c5",
+          "state": "initial",
+          "endTime": null,
+          "actions": [
+            {
+              "inputs": [
+                [
+                  {
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0211729575",
+                    "triggeredLength": 10,
+                    "label": "Scan Input Batch",
+                    "type": "MatchesInput",
+                    "matches": "0211729575",
+                    "groupKey": "0211729575",
+                    "uom": "",
+                    "allowFailure": false,
+                    "name": "inputBatch",
+                    "id": "ca6657e5-25f1-4168-bdeb-754096538ea4",
+                    "value": null,
+                    "group": "inputBatch",
+                    "timestamp": null
+                  },
+                  {
+                    "defaultUom": "KG",
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0211729575",
+                    "optional": false,
+                    "label": "Enter Batch Quantity",
+                    "type": "SimpleInput",
+                    "groupKey": "0211729575",
+                    "uom": null,
+                    "uomList": [
+                      "KG",
+                      "MK",
+                      "LB",
+                      "KCS",
+                      "KPS"
+                    ],
+                    "name": "quantity",
+                    "id": "889e5242-ce6c-4122-99aa-996c3f5b4fde",
+                    "value": null,
+                    "group": "inputBatch",
+                    "timestamp": null
+                  }
+                ],
+                [
+                  {
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0211905602",
+                    "triggeredLength": 10,
+                    "label": "Scan Input Batch",
+                    "type": "MatchesInput",
+                    "matches": "0211905602",
+                    "groupKey": "0211905602",
+                    "uom": "",
+                    "allowFailure": false,
+                    "name": "inputBatch",
+                    "id": "0d0bb29e-f8cc-47d6-9d67-a9c3a7ee85d1",
+                    "value": null,
+                    "group": "inputBatch",
+                    "timestamp": null
+                  },
+                  {
+                    "defaultUom": "KG",
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0211905602",
+                    "optional": false,
+                    "label": "Enter Batch Quantity",
+                    "type": "SimpleInput",
+                    "groupKey": "0211905602",
+                    "uom": null,
+                    "uomList": [
+                      "KG",
+                      "MK",
+                      "LB",
+                      "KCS",
+                      "KPS"
+                    ],
+                    "name": "quantity",
+                    "id": "eb3e56fa-af84-47e6-9ed1-fe8d6710bd3d",
+                    "value": null,
+                    "group": "inputBatch",
+                    "timestamp": null
+                  }
+                ]
+              ],
+              "description": "Scan Input Batches",
+              "type": "InputMappedSingleForm",
+              "actionGroupNumber": "BLEND_OPERATION_START",
+              "stateHistory": [],
+              "number": "",
+              "userFields": [],
+              "name": "Input Batches",
+              "startTime": null,
+              "id": "dcd3a10f-a502-4334-ae40-1560d5905ee7",
+              "state": "initial",
+              "endTime": null,
+              "map": "~>{\"operator\": \"mapInputs\", \n                      \"collection\": {\"operator\": \"getValue\", \"source\": \"order\", \"property\": \"inputBatches\"}}"
+            },
+            {
+              "inputs": [
+                [
+                  {
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0212815648",
+                    "triggeredLength": 10,
+                    "label": "Scan Output Batch",
+                    "type": "MatchesInput",
+                    "matches": "0212815648",
+                    "groupKey": "0212815648",
+                    "uom": "",
+                    "allowFailure": false,
+                    "name": "outputBatch",
+                    "id": "bee4e84e-3c15-4938-9b30-f1ec9179e3da",
+                    "value": null,
+                    "group": "outputBatch",
+                    "timestamp": null
+                  },
+                  {
+                    "defaultUom": "KG",
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0212815648",
+                    "optional": false,
+                    "label": "Enter Batch Quantity",
+                    "type": "SimpleInput",
+                    "groupKey": "0212815648",
+                    "uom": null,
+                    "uomList": [
+                      "KG",
+                      "MK",
+                      "LB",
+                      "KCS",
+                      "KPS"
+                    ],
+                    "name": "quantity",
+                    "id": "22d2e2dc-1bc6-454e-b44b-c856818423b0",
+                    "value": null,
+                    "group": "outputBatch",
+                    "timestamp": null
+                  }
+                ]
+              ],
+              "description": "Scan Output Batches",
+              "type": "InputMappedSingleForm",
+              "actionGroupNumber": "BLEND_OPERATION_STOP",
+              "stateHistory": [],
+              "number": "",
+              "userFields": [],
+              "name": "Output Batches",
+              "startTime": null,
+              "id": "86798a3e-a6dd-4e6b-8c6e-f17a92cfbebd",
+              "state": "initial",
+              "endTime": null,
+              "map": "~>{\"operator\": \"mapInputs\", \n                      \"collection\": {\"operator\": \"getValue\", \"source\": \"order\", \"property\": \"outputBatches\"}}"
+            }
+          ]
+        }
+      },
+      {
+        "op": "add",
+        "path": [
+          "stateHistory",
+          0
+        ],
+        "value": {
+          "user": "auto",
+          "startTime": 1648571196510,
+          "state": "in-progress"
+        }
+      },
+      {
+        "op": "replace",
+        "path": [
+          "startTime"
+        ],
+        "value": 1648571196510
+      },
+      {
+        "op": "replace",
+        "path": [
+          "state"
+        ],
+        "value": "in-progress"
+      }
+    ],
+    "CLIENT_PATCH_ACTION": "add-operation",
+    "PATCH_USER": "john.bell1.ext@bayer.com"
+  },
+  {
+    "PK": "ORD#ENK#104348221",
+    "SK": "cl1ccqfnl000708mn35tpa1x1",
+    "PREV_REV": "2-cl1ccq9b8000608mn39yx4zk8",
+    "PATCH_DATE": 1648571211202,
+    "REV": "3-cl1ccqfnl000708mn35tpa1x1",
+    "API_PATCH_ACTION": "update-operation",
+    "CAT": "ORD",
+    "patches": [
+      {
+        "op": "replace",
+        "path": [
+          "stages",
+          0,
+          "operations",
+          0
+        ],
+        "value": {
+          "operationDefinitionId": "94b035e8-9f01-4369-9832-c11126bac4c7",
+          "actionGroups": [
+            {
+              "number": "BLEND_OPERATION_START",
+              "guardedState": "in-progress",
+              "label": "Start"
+            },
+            {
+              "number": "BLEND_OPERATION_STOP",
+              "guardedState": "complete",
+              "label": "Complete"
+            }
+          ],
+          "description": "",
+          "equipmentId": "51f93aa3-1c22-4286-9b66-864f00fbb692",
+          "stateHistory": [
+            {
+              "startTime": 1648571196506,
+              "state": "initial",
+              "endTime": 1648571204753,
+              "user": "john.bell1.ext@bayer.com"
+            },
+            {
+              "user": "john.bell1.ext@bayer.com",
+              "startTime": 1648571204753,
+              "state": "in-progress"
+            }
+          ],
+          "number": "",
+          "userFields": [],
+          "createTime": 1648571196506,
+          "name": "Blending",
+          "startTime": 1648571204753,
+          "id": "1a966d27-ac0b-4133-a216-afdc53dd31c5",
+          "state": "in-progress",
+          "endTime": null,
+          "actions": [
+            {
+              "inputs": [
+                [
+                  {
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0211729575",
+                    "triggeredLength": 10,
+                    "label": "Scan Input Batch",
+                    "type": "MatchesInput",
+                    "matches": "0211729575",
+                    "groupKey": "0211729575",
+                    "uom": "",
+                    "allowFailure": false,
+                    "name": "inputBatch",
+                    "id": "ca6657e5-25f1-4168-bdeb-754096538ea4",
+                    "value": "0211729575",
+                    "user": "john.bell1.ext@bayer.com",
+                    "group": "inputBatch",
+                    "timestamp": 1648571202412
+                  },
+                  {
+                    "defaultUom": "KG",
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0211729575",
+                    "optional": false,
+                    "label": "Enter Batch Quantity",
+                    "type": "SimpleInput",
+                    "groupKey": "0211729575",
+                    "uom": "KG",
+                    "uomList": [
+                      "KG",
+                      "MK",
+                      "LB",
+                      "KCS",
+                      "KPS"
+                    ],
+                    "name": "quantity",
+                    "id": "889e5242-ce6c-4122-99aa-996c3f5b4fde",
+                    "value": "20",
+                    "user": "john.bell1.ext@bayer.com",
+                    "group": "inputBatch",
+                    "timestamp": 1648571202412
+                  }
+                ],
+                [
+                  {
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0211905602",
+                    "triggeredLength": 10,
+                    "label": "Scan Input Batch",
+                    "type": "MatchesInput",
+                    "matches": "0211905602",
+                    "groupKey": "0211905602",
+                    "uom": "",
+                    "allowFailure": false,
+                    "name": "inputBatch",
+                    "id": "0d0bb29e-f8cc-47d6-9d67-a9c3a7ee85d1",
+                    "value": "0211905602",
+                    "user": "john.bell1.ext@bayer.com",
+                    "group": "inputBatch",
+                    "timestamp": 1648571204671
+                  },
+                  {
+                    "defaultUom": "KG",
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0211905602",
+                    "optional": false,
+                    "label": "Enter Batch Quantity",
+                    "type": "SimpleInput",
+                    "groupKey": "0211905602",
+                    "uom": "KG",
+                    "uomList": [
+                      "KG",
+                      "MK",
+                      "LB",
+                      "KCS",
+                      "KPS"
+                    ],
+                    "name": "quantity",
+                    "id": "eb3e56fa-af84-47e6-9ed1-fe8d6710bd3d",
+                    "value": "20",
+                    "user": "john.bell1.ext@bayer.com",
+                    "group": "inputBatch",
+                    "timestamp": 1648571204671
+                  }
+                ]
+              ],
+              "description": "Scan Input Batches",
+              "type": "InputMappedSingleForm",
+              "actionGroupNumber": "BLEND_OPERATION_START",
+              "stateHistory": [],
+              "number": "",
+              "userFields": [],
+              "name": "Input Batches",
+              "startTime": 1648571204671,
+              "id": "dcd3a10f-a502-4334-ae40-1560d5905ee7",
+              "state": "complete",
+              "endTime": 1648571204671,
+              "map": "~>{\"operator\": \"mapInputs\", \n                      \"collection\": {\"operator\": \"getValue\", \"source\": \"order\", \"property\": \"inputBatches\"}}",
+              "user": "john.bell1.ext@bayer.com"
+            },
+            {
+              "inputs": [
+                [
+                  {
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0212815648",
+                    "triggeredLength": 10,
+                    "label": "Scan Output Batch",
+                    "type": "MatchesInput",
+                    "matches": "0212815648",
+                    "groupKey": "0212815648",
+                    "uom": "",
+                    "allowFailure": false,
+                    "name": "outputBatch",
+                    "id": "bee4e84e-3c15-4938-9b30-f1ec9179e3da",
+                    "value": null,
+                    "group": "outputBatch",
+                    "timestamp": null
+                  },
+                  {
+                    "defaultUom": "KG",
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0212815648",
+                    "optional": false,
+                    "label": "Enter Batch Quantity",
+                    "type": "SimpleInput",
+                    "groupKey": "0212815648",
+                    "uom": null,
+                    "uomList": [
+                      "KG",
+                      "MK",
+                      "LB",
+                      "KCS",
+                      "KPS"
+                    ],
+                    "name": "quantity",
+                    "id": "22d2e2dc-1bc6-454e-b44b-c856818423b0",
+                    "value": null,
+                    "group": "outputBatch",
+                    "timestamp": null
+                  }
+                ]
+              ],
+              "description": "Scan Output Batches",
+              "type": "InputMappedSingleForm",
+              "actionGroupNumber": "BLEND_OPERATION_STOP",
+              "stateHistory": [],
+              "number": "",
+              "userFields": [],
+              "name": "Output Batches",
+              "startTime": null,
+              "id": "86798a3e-a6dd-4e6b-8c6e-f17a92cfbebd",
+              "state": "initial",
+              "endTime": null,
+              "map": "~>{\"operator\": \"mapInputs\", \n                      \"collection\": {\"operator\": \"getValue\", \"source\": \"order\", \"property\": \"outputBatches\"}}"
+            }
+          ]
+        }
+      }
+    ],
+    "CLIENT_PATCH_ACTION": "update-operation",
+    "PATCH_USER": "john.bell1.ext@bayer.com"
+  },
+  {
+    "PK": "ORD#ENK#104348221",
+    "SK": "cl1ccqmdk000808mne3v7beyg",
+    "PREV_REV": "3-cl1ccqfnl000708mn35tpa1x1",
+    "PATCH_DATE": 1648571219912,
+    "REV": "4-cl1ccqmdk000808mne3v7beyg",
+    "API_PATCH_ACTION": "update-operation",
+    "CAT": "ORD",
+    "patches": [
+      {
+        "op": "replace",
+        "path": [
+          "stages",
+          0,
+          "operations",
+          0
+        ],
+        "value": {
+          "operationDefinitionId": "94b035e8-9f01-4369-9832-c11126bac4c7",
+          "actionGroups": [
+            {
+              "number": "BLEND_OPERATION_START",
+              "guardedState": "in-progress",
+              "label": "Start"
+            },
+            {
+              "number": "BLEND_OPERATION_STOP",
+              "guardedState": "complete",
+              "label": "Complete"
+            }
+          ],
+          "description": "",
+          "equipmentId": "51f93aa3-1c22-4286-9b66-864f00fbb692",
+          "stateHistory": [
+            {
+              "startTime": 1648571196506,
+              "state": "initial",
+              "endTime": 1648571204753,
+              "user": "john.bell1.ext@bayer.com"
+            },
+            {
+              "startTime": 1648571204753,
+              "state": "in-progress",
+              "endTime": 1648571213149,
+              "user": "john.bell1.ext@bayer.com"
+            },
+            {
+              "user": "john.bell1.ext@bayer.com",
+              "startTime": 1648571213149,
+              "state": "complete"
+            }
+          ],
+          "number": "",
+          "userFields": [],
+          "createTime": 1648571196506,
+          "name": "Blending",
+          "startTime": 1648571204753,
+          "id": "1a966d27-ac0b-4133-a216-afdc53dd31c5",
+          "state": "complete",
+          "endTime": 1648571213149,
+          "actions": [
+            {
+              "inputs": [
+                [
+                  {
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0211729575",
+                    "triggeredLength": 10,
+                    "label": "Scan Input Batch",
+                    "type": "MatchesInput",
+                    "matches": "0211729575",
+                    "groupKey": "0211729575",
+                    "uom": "",
+                    "allowFailure": false,
+                    "name": "inputBatch",
+                    "id": "ca6657e5-25f1-4168-bdeb-754096538ea4",
+                    "value": "0211729575",
+                    "user": "john.bell1.ext@bayer.com",
+                    "group": "inputBatch",
+                    "timestamp": 1648571202412
+                  },
+                  {
+                    "defaultUom": "KG",
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0211729575",
+                    "optional": false,
+                    "label": "Enter Batch Quantity",
+                    "type": "SimpleInput",
+                    "groupKey": "0211729575",
+                    "uom": "KG",
+                    "uomList": [
+                      "KG",
+                      "MK",
+                      "LB",
+                      "KCS",
+                      "KPS"
+                    ],
+                    "name": "quantity",
+                    "id": "889e5242-ce6c-4122-99aa-996c3f5b4fde",
+                    "value": "20",
+                    "user": "john.bell1.ext@bayer.com",
+                    "group": "inputBatch",
+                    "timestamp": 1648571202412
+                  }
+                ],
+                [
+                  {
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0211905602",
+                    "triggeredLength": 10,
+                    "label": "Scan Input Batch",
+                    "type": "MatchesInput",
+                    "matches": "0211905602",
+                    "groupKey": "0211905602",
+                    "uom": "",
+                    "allowFailure": false,
+                    "name": "inputBatch",
+                    "id": "0d0bb29e-f8cc-47d6-9d67-a9c3a7ee85d1",
+                    "value": "0211905602",
+                    "user": "john.bell1.ext@bayer.com",
+                    "group": "inputBatch",
+                    "timestamp": 1648571204671
+                  },
+                  {
+                    "defaultUom": "KG",
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0211905602",
+                    "optional": false,
+                    "label": "Enter Batch Quantity",
+                    "type": "SimpleInput",
+                    "groupKey": "0211905602",
+                    "uom": "KG",
+                    "uomList": [
+                      "KG",
+                      "MK",
+                      "LB",
+                      "KCS",
+                      "KPS"
+                    ],
+                    "name": "quantity",
+                    "id": "eb3e56fa-af84-47e6-9ed1-fe8d6710bd3d",
+                    "value": "20",
+                    "user": "john.bell1.ext@bayer.com",
+                    "group": "inputBatch",
+                    "timestamp": 1648571204671
+                  }
+                ]
+              ],
+              "description": "Scan Input Batches",
+              "type": "InputMappedSingleForm",
+              "actionGroupNumber": "BLEND_OPERATION_START",
+              "stateHistory": [],
+              "number": "",
+              "userFields": [],
+              "name": "Input Batches",
+              "startTime": 1648571204671,
+              "id": "dcd3a10f-a502-4334-ae40-1560d5905ee7",
+              "state": "complete",
+              "endTime": 1648571204671,
+              "map": "~>{\"operator\": \"mapInputs\", \n                      \"collection\": {\"operator\": \"getValue\", \"source\": \"order\", \"property\": \"inputBatches\"}}",
+              "user": "john.bell1.ext@bayer.com"
+            },
+            {
+              "inputs": [
+                [
+                  {
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0212815648",
+                    "triggeredLength": 10,
+                    "label": "Scan Output Batch",
+                    "type": "MatchesInput",
+                    "matches": "0212815648",
+                    "groupKey": "0212815648",
+                    "uom": "",
+                    "allowFailure": false,
+                    "name": "outputBatch",
+                    "id": "bee4e84e-3c15-4938-9b30-f1ec9179e3da",
+                    "value": "0212815648",
+                    "user": "john.bell1.ext@bayer.com",
+                    "group": "outputBatch",
+                    "timestamp": 1648571213021
+                  },
+                  {
+                    "defaultUom": "KG",
+                    "groupType": "InputMappedSingleForm",
+                    "batch": "0212815648",
+                    "optional": false,
+                    "label": "Enter Batch Quantity",
+                    "type": "SimpleInput",
+                    "groupKey": "0212815648",
+                    "uom": "KG",
+                    "uomList": [
+                      "KG",
+                      "MK",
+                      "LB",
+                      "KCS",
+                      "KPS"
+                    ],
+                    "name": "quantity",
+                    "id": "22d2e2dc-1bc6-454e-b44b-c856818423b0",
+                    "value": "40",
+                    "user": "john.bell1.ext@bayer.com",
+                    "group": "outputBatch",
+                    "timestamp": 1648571213021
+                  }
+                ]
+              ],
+              "description": "Scan Output Batches",
+              "type": "InputMappedSingleForm",
+              "actionGroupNumber": "BLEND_OPERATION_STOP",
+              "stateHistory": [],
+              "number": "",
+              "userFields": [],
+              "name": "Output Batches",
+              "startTime": 1648571213021,
+              "id": "86798a3e-a6dd-4e6b-8c6e-f17a92cfbebd",
+              "state": "complete",
+              "endTime": 1648571213021,
+              "map": "~>{\"operator\": \"mapInputs\", \n                      \"collection\": {\"operator\": \"getValue\", \"source\": \"order\", \"property\": \"outputBatches\"}}",
+              "user": "john.bell1.ext@bayer.com"
+            }
+          ]
+        }
+      }
+    ],
+    "CLIENT_PATCH_ACTION": "update-operation",
+    "PATCH_USER": "john.bell1.ext@bayer.com"
+  }
+]

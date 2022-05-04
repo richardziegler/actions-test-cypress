@@ -1,0 +1,151 @@
+const { describe, it } = require("mocha");
+const dayjs = require("dayjs");
+const SCANNED_BATCH_CLASS = 'text-blue-700';
+const ALL_BATCHES_SCANNED_CLASS = 'bg-green-100';
+
+describe("Perform Blending operation on PO", () => {
+     it('Blend', function(){
+
+         cy.gotoOrder('104348221')
+         cy.clickTab('Tasks')
+
+         //should addOperation be prefixed with 'test' since it does more than other simpler commands??
+         cy.addOperation('Mixer-162', 'Blending')
+            cy.orderStateShouldBe('In Progress')
+
+        cy.startOperation(0, 'Blending')
+            cy.inputShouldBeRequired('batch')
+            cy.inputShouldBeRequired('quantity')
+            cy.requiredBatchesShouldBe(['0211729575', '0211905602'])
+            cy.collectedBatchCountShouldBe('0/2')
+            cy.inputShouldHaveUoms('quantity', 'KG', ['KG','MK', 'LB', 'KCS', 'KPS'])
+            cy.inputFormButtonShouldRead("Save")
+            cy.inputFormButtonShouldBeDisabled()
+
+        cy.enterInput('batch', '0211729575')
+            cy.batchInRequiredBatchesShouldHaveClass('0211729575', SCANNED_BATCH_CLASS);
+
+        cy.enterInput('quantity', '20')
+            cy.collectedBatchCountShouldBe('1/2')
+            
+        cy.clickInputFormButton()
+            cy.inputShouldBeRequired('batch')
+            cy.inputShouldHaveFocus('batch')
+            cy.inputShouldBeRequired('quantity')
+
+        cy.enterInput('batch', '0211905602')
+            cy.batchInRequiredBatchesShouldHaveClass('0211905602', SCANNED_BATCH_CLASS)
+
+        cy.enterInput('quantity', '20')
+            cy.collectedBatchCountShouldBe('2/2')
+            cy.requiredBatchesAreaShouldHaveClass(ALL_BATCHES_SCANNED_CLASS)
+            
+        cy.wait(300)
+        cy.clickInputFormButton()
+            cy.wait(300)
+            cy.inputFormShouldBeDismissed()
+            cy.operationShouldBeStarted(0, 'Blending')    
+
+        cy.stopOperation(0, 'Blending')
+            cy.inputFormShouldBeActivated()
+            cy.inputShouldBeRequired('batch')
+            cy.inputShouldHaveFocus('batch')
+            cy.inputShouldBeRequired('quantity')
+            cy.requiredBatchesShouldBe(['0212815648'])
+            cy.collectedBatchCountShouldBe('0/1')
+            cy.inputShouldHaveUoms('quantity', 'KG', ['KG','MK', 'LB', 'KCS', 'KPS'])
+            cy.inputFormButtonShouldRead("Complete")
+            cy.inputFormButtonShouldBeDisabled()
+
+        cy.enterInput('batch', '0212815648')
+            cy.batchInRequiredBatchesShouldHaveClass('0212815648', SCANNED_BATCH_CLASS)
+
+        cy.enterInput('quantity', '40')
+            cy.collectedBatchCountShouldBe('1/1')
+            cy.requiredBatchesAreaShouldHaveClass(ALL_BATCHES_SCANNED_CLASS)
+            cy.inputFormButtonShouldBeEnabled()
+
+        cy.clickInputFormButton()
+            cy.inputFormShouldBeDismissed()
+            cy.operationShouldBeCompleted()
+
+     })
+
+     it('Drying', function() {
+        cy.get('button[data-test="ord-add-op-button"]').click()
+        cy.focused().should('have.class', 'mdc-text-field__input')   
+        cy.get('input[data-test="add-op-form-equip-field"]').type('Roterende Droger-993')
+        cy.get('button[type="submit"]').contains('Save').click()
+        cy.get('div[class="leading-none text-xs pt-0.5 pl-1"]').should('have.text', 'Not Started')
+        cy.get('button[data-test="op-action"]').contains('Start').last().click()
+        cy.get('input[data-test="input-form-batch-field"]').parent().should('have.class', 'mdc-text-field--invalid')
+        cy.get('input[data-test="input-form-quantity-field"]').parent().should('not.have.class', 'mdc-text-field--invalid')
+        cy.focused().should('have.attr', 'data-test', 'input-form-batch-field')
+        cy.get('div[data-test="input-form-batch-area"]').contains('div', '0212815648').should('have.text', '0212815648')
+        cy.get('div[data-test="input-form-batch-count"]').should('have.text', '0/1')
+        cy.get('span[class="mdc-select__selected-text-container"]').contains('span', 'KG').should('have.text', 'KG')
+        cy.get('ul[class="lmnt mdc-list"]').children().should('contain.text', 'KG')
+        cy.get('ul[class="lmnt mdc-list"]').children().should('contain.text', 'MK')
+        cy.get('ul[class="lmnt mdc-list"]').children().should('contain.text', 'LB')
+        cy.get('ul[class="lmnt mdc-list"]').children().should('contain.text', 'KCS')
+        cy.get('ul[class="lmnt mdc-list"]').children().should('contain.text', 'KPS')
+        cy.get('button[data-test="input-form-button"]').should('be.disabled')
+        cy.get('input[data-test="input-form-batch-field"]').type('0212815648')
+        cy.get('div[data-test="input-form-batch-area"]').contains('div', '0212815648').should('have.class', 'text-green-800')
+        cy.get('button[data-test="input-form-button"]').should('be.enabled')
+        cy.get('div[data-test="input-form-batch-count"]').should('have.text', '1/1')
+        cy.get('button[data-test="input-form-button"]').click()
+        cy.get('div[data-test="input-form"]').should('not.exist')
+        cy.get('div[data-test="ord-state"]').should('have.class', 'text-yellow-500')
+        cy.wait(500)
+        cy.get('div[class="leading-none text-xs pt-0.5 pl-1"]').last().should(($span => {
+            const date = dayjs($span.text()).unix()
+            const now = dayjs().unix()
+            expect(date).to.be.closeTo(now, 30)
+        }))
+        cy.get('button[data-test="op-action"]').contains('Stop').last().click()
+        cy.get('div[class="fixed inset-0 max-w-full flex justify-center bg-[rgba(0,0,0,0.4)]"]').should('exist')
+        cy.get('input[data-test="input-form-batch-field"]').parent().should('have.class', 'mdc-text-field--invalid')
+        cy.get('input[data-test="input-form-quantity-field"]').parent().should('not.have.class', 'mdc-text-field--invalid')
+        cy.focused().should('have.attr', 'data-test', 'input-form-batch-field')
+        cy.get('div[data-test="input-form-batch-area"]').contains('div', '0212815648').should('have.text', '0212815648')
+        cy.get('button[data-test="input-form-button"]').should('be.disabled')
+        cy.get('div[data-test="input-form-batch-count"]').should('have.text', '0/1')
+        cy.get('input[data-test="input-form-batch-field"]').type('0212815648')
+        cy.get('div[data-test="input-form-batch-area"]').contains('div', '0212815648').should('have.class', 'text-green-800')
+        cy.get('button[data-test="input-form-button"]').should('be.enabled')
+        cy.get('button[data-test="input-form-button"]').click()
+        cy.get('div[class="fixed inset-0 max-w-full flex justify-center bg-[rgba(0,0,0,0.4)]"]').should('not.exist') 
+        cy.get('svg[data-test="op-status-icon"]').should('have.class', 'text-green-700')
+    })
+
+     it('Blending PO', function() {
+         cy.get('button[data-test="ord-menu-button"]').click()
+         cy.get('li[data-test="ord-menu-complete"]').contains('COMPLETE').click()
+         cy.get('div[class="fixed inset-0 max-w-full flex justify-center bg-[rgba(0,0,0,0.4)]"]').should('exist')
+         cy.get('input[data-test="input-form-batch-field"]').parent().should('have.class', 'mdc-text-field--invalid')
+         cy.get('input[data-test="input-form-quantity-field"]').parent().should('have.class', 'mdc-text-field--invalid')
+         cy.focused().should('have.attr', 'data-test', 'input-form-batch-field')
+         cy.get('input[data-test="input-form-TSW-field"]').parent().should('not.have.class', 'mdc-text-field--invalid')
+         cy.get('input[data-test="input-form-moisture-field"]').parent().should('not.have.class', 'mdc-text-field--invalid')
+         cy.get('button[data-test="input-form-button"]').should('be.disabled')
+         cy.get('div[data-test="input-form-batch-area"]').contains('div', '0212815648').should('have.text', '0212815648')
+         cy.get('div[data-test="input-form-batch-count"]').should('have.text', '0/1')
+         cy.get('span[class="mdc-select__selected-text-container"]').contains('span', 'KG').should('have.text', 'KG')
+         cy.get('ul[class="lmnt mdc-list"]').children().should('contain.text', 'KG')
+         cy.get('ul[class="lmnt mdc-list"]').children().should('contain.text', 'MK')
+         cy.get('ul[class="lmnt mdc-list"]').children().should('contain.text', 'LB')
+         cy.get('ul[class="lmnt mdc-list"]').children().should('contain.text', 'KCS')
+         cy.get('ul[class="lmnt mdc-list"]').children().should('contain.text', 'KPS')
+         cy.get('input[data-test="input-form-batch-field"]').type('0212815648')
+         cy.get('div[data-test="input-form-batch-area"]').contains('div', '0212815648').should('have.class', 'text-blue-700')
+         cy.get('input[data-test="input-form-quantity-field"]').type('35')
+         cy.get('div[data-test="input-form-batch-count"]').should('have.text', '1/1')
+         cy.get('div[data-test="input-form-batch-area"]').contains('div', '0212815648').should('have.class', 'text-green-800')
+         cy.get('button[data-test="input-form-button"]').should('be.enabled')
+         cy.get('button[data-test="input-form-button"]').click()
+         cy.get('div[data-test="ord-state"]').contains('Complete').should('exist')
+         cy.get('button[data-test="ord-add-op-button"]').should('be.disabled')
+        })
+})
+

@@ -1,0 +1,82 @@
+[
+  {
+    "PK": "ORD#ENK#104345314",
+    "SK": "0",
+    "dataPartition": "ENK",
+    "stages": [
+      {
+        "name": "PROCESS",
+        "number": "PROCESS",
+        "description": "PROCESS",
+        "userFields": [],
+        "id": "c160403a-bfb3-481f-8dad-164ed79fe831",
+        "operations": []
+      }
+    ],
+    "processOrderType": "ZVPL",
+    "site": "ENK",
+    "state": "initial",
+    "baseQuantity": "634.000",
+    "processOrder": "104345314",
+    "stateHistory": [],
+    "CAT": "ORD",
+    "longText": "per abuis 7.62kg teveel getreat FOIL 1MK",
+    "plant": "1268",
+    "id": "372727fe-ab69-4bfb-a9f7-2f0043165f1c",
+    "prodSchedDesc": "Treat-Pack",
+    "orderTemplate": "{\"prodSchedCode\":\"008\"}",
+    "prodSchedCode": "008",
+    "outputMaterialUom": "MK",
+    "inputMaterialUom": "KG",
+    "REV": "1-cky9ouglm00008gmp8ui7fh4o",
+    "outputBatches": [
+      "0212773813"
+    ],
+    "baseUom": "MK",
+    "startTime": null,
+    "outputMaterialDesc": "VSD.FWAZ.MF0001S.816.551.000",
+    "endTime": null,
+    "createdOn": "10/04/2021",
+    "inputBatches": [
+      "0212329427"
+    ],
+    "description": "per abuis 7.62kg teveel getreat",
+    "outputMaterial": "13068827"
+  },
+  {
+    "PK": "SUM#ENK#initial",
+    "SK": "cky9ouglm00008gmp8ui7fh4o#104345314",
+    "dataPartition": "ENK",
+    "totalOperations": 0,
+    "processOrderType": "ZVPL",
+    "site": "ENK",
+    "state": "initial",
+    "baseQuantity": "634.000",
+    "processOrder": "104345314",
+    "CAT": "SUM",
+    "longText": "per abuis 7.62kg teveel getreat FOIL 1MK",
+    "plant": "1268",
+    "id": "372727fe-ab69-4bfb-a9f7-2f0043165f1c",
+    "prodSchedDesc": "Treat-Pack",
+    "orderTemplate": "{\"prodSchedCode\":\"008\"}",
+    "prodSchedCode": "008",
+    "outputMaterialUom": "MK",
+    "inputMaterialUom": "KG",
+    "REV": "1-cky9ouglm00008gmp8ui7fh4o",
+    "outputBatches": [
+      "0212773813"
+    ],
+    "baseUom": "MK",
+    "completedOperations": 0,
+    "startTime": null,
+    "outputMaterialDesc": "VSD.FWAZ.MF0001S.816.551.000",
+    "endTime": null,
+    "createdOn": "10/04/2021",
+    "inputBatches": [
+      "0212329427"
+    ],
+    "currentOperations": [],
+    "description": "per abuis 7.62kg teveel getreat",
+    "outputMaterial": "13068827"
+  }
+]

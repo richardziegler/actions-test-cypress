@@ -1,0 +1,84 @@
+[
+{
+ "PK": "ORD#ENK#104348221",
+ "SK": "0",
+ "dataPartition": "ENK",
+ "stages": [
+  {
+   "name": "PROCESS",
+   "number": "PROCESS",
+   "description": "PROCESS",
+   "userFields": [],
+   "id": "07498209-cdce-48c7-8c56-ed9c7646cf17",
+   "operations": []
+  }
+ ],
+ "processOrderType": "ZVPL",
+ "site": "ENK",
+ "state": "initial",
+ "baseQuantity": "1.380",
+ "processOrder": "104348221",
+ "stateHistory": [],
+ "CAT": "ORD",
+ "longText": "BLEND OPN PEPPER",
+ "plant": "1268",
+ "id": "ad5292eb-8b10-4e38-9286-8b83bdf9ca21",
+ "prodSchedDesc": "Blending",
+ "orderTemplate": "DEFAULT",
+ "prodSchedCode": "012",
+ "outputMaterialUom": "KG",
+ "inputMaterialUom": "KG",
+ "REV": "1-cky939ovq0006hgmpg02gehon",
+ "outputBatches": [
+  "0212815648"
+ ],
+ "baseUom": "KG",
+ "startTime": null,
+ "outputMaterialDesc": "VTS.KAPTUR.SEMI.100.000.000",
+ "endTime": null,
+ "createdOn": "10/08/2021",
+ "inputBatches": [
+  "0211729575",
+  "0211905602"
+ ],
+ "description": "BLEND OPN PEPPER",
+ "outputMaterial": "11147891"
+},
+{
+ "PK": "SUM#ENK#initial",
+ "SK": "cky939ovq0006hgmpg02gehon#104348221",
+ "dataPartition": "ENK",
+ "totalOperations": 0,
+ "processOrderType": "ZVPL",
+ "site": "ENK",
+ "state": "initial",
+ "baseQuantity": "1.380",
+ "processOrder": "104348221",
+ "CAT": "SUM",
+ "longText": "BLEND OPN PEPPER",
+ "plant": "1268",
+ "id": "ad5292eb-8b10-4e38-9286-8b83bdf9ca21",
+ "prodSchedDesc": "Blending",
+ "orderTemplate": "DEFAULT",
+ "prodSchedCode": "012",
+ "outputMaterialUom": "KG",
+ "inputMaterialUom": "KG",
+ "REV": "1-cky939ovq0006hgmpg02gehon",
+ "outputBatches": [
+  "0212815648"
+ ],
+ "baseUom": "KG",
+ "completedOperations": 0,
+ "startTime": null,
+ "outputMaterialDesc": "VTS.KAPTUR.SEMI.100.000.000",
+ "endTime": null,
+ "createdOn": "10/08/2021",
+ "inputBatches": [
+  "0211729575",
+  "0211905602"
+ ],
+ "currentOperations": [],
+ "description": "BLEND OPN PEPPER",
+ "outputMaterial": "11147891"
+}
+]

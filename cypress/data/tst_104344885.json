@@ -1,0 +1,82 @@
+[
+  {
+    "PK": "ORD#ENK#104344885",
+    "SK": "0",
+    "dataPartition": "ENK",
+    "stages": [
+      {
+        "name": "PROCESS",
+        "number": "PROCESS",
+        "description": "PROCESS",
+        "userFields": [],
+        "id": "20c13a61-d803-4cb8-8f8a-92f1f4d0c2e4",
+        "operations": []
+      }
+    ],
+    "processOrderType": "ZVPL",
+    "site": "ENK",
+    "state": "initial",
+    "baseQuantity": "1.100",
+    "processOrder": "104344885",
+    "stateHistory": [],
+    "CAT": "ORD",
+    "longText": null,
+    "plant": "1268",
+    "id": "7a507140-3c27-44f8-b266-ac19b31c2519",
+    "prodSchedDesc": "Treat-Pack",
+    "orderTemplate": "{\"prodSchedCode\":\"008\"}",
+    "prodSchedCode": "008",
+    "outputMaterialUom": "KG",
+    "inputMaterialUom": "KG",
+    "REV": "1-cky939oes0003hgmp3wfx7yca",
+    "outputBatches": [
+      "0212773428"
+    ],
+    "baseUom": "KG",
+    "startTime": null,
+    "outputMaterialDesc": "VS3.TROPICANA.GF0025S.816.551.000",
+    "endTime": null,
+    "createdOn": "10/04/2021",
+    "inputBatches": [
+      "0183050479"
+    ],
+    "description": "FOIL 25GRM",
+    "outputMaterial": "13017391"
+  },
+  {
+    "PK": "SUM#ENK#initial",
+    "SK": "cky939oes0003hgmp3wfx7yca#104344885",
+    "dataPartition": "ENK",
+    "totalOperations": 0,
+    "processOrderType": "ZVPL",
+    "site": "ENK",
+    "state": "initial",
+    "baseQuantity": "1.100",
+    "processOrder": "104344885",
+    "CAT": "SUM",
+    "longText": null,
+    "plant": "1268",
+    "id": "7a507140-3c27-44f8-b266-ac19b31c2519",
+    "prodSchedDesc": "Treat-Pack",
+    "orderTemplate": "{\"prodSchedCode\":\"008\"}",
+    "prodSchedCode": "008",
+    "outputMaterialUom": "KG",
+    "inputMaterialUom": "KG",
+    "REV": "1-cky939oes0003hgmp3wfx7yca",
+    "outputBatches": [
+      "0212773428"
+    ],
+    "baseUom": "KG",
+    "completedOperations": 0,
+    "startTime": null,
+    "outputMaterialDesc": "VS3.TROPICANA.GF0025S.816.551.000",
+    "endTime": null,
+    "createdOn": "10/04/2021",
+    "inputBatches": [
+      "0183050479"
+    ],
+    "currentOperations": [],
+    "description": "FOIL 25GRM",
+    "outputMaterial": "13017391"
+  }
+]

@@ -1,0 +1,85 @@
+[{
+    "PK": "ORD#ENK#104342662",
+    "SK": "0",
+    "dataPartition": "ENK",
+    "stages": [
+     {
+      "name": "PROCESS",
+      "number": "PROCESS",
+      "description": "PROCESS",
+      "userFields": [],
+      "id": "fd894837-ab48-45c4-97f3-7a7052ea5a3a",
+      "operations": []
+     }
+    ],
+    "processOrderType": "ZVCL",
+    "site": "ENK",
+    "state": "initial",
+    "baseQuantity": "15.200",
+    "processOrder": "104342662",
+    "stateHistory": [],
+    "CAT": "ORD",
+    "longText": "Clean/size sanitized in ENK. double seeds batch: 0212722158, GR on STR2",
+    "plant": "1268",
+    "id": "2991260a-68e9-49e8-ab3b-56a9d5836d5b",
+    "prodSchedDesc": "Clean-Size",
+    "orderTemplate": "DEFAULT",
+    "prodSchedCode": "003",
+    "outputMaterialUom": "KG",
+    "inputMaterialUom": "KCS",
+    "REV": "1-cky939oq20005hgmpeb546pdb",
+    "outputBatches": [
+     "0212722155",
+     "0212722156",
+     "0212722157",
+     "0212722158"
+    ],
+    "baseUom": "KG",
+    "startTime": null,
+    "outputMaterialDesc": "VTW.EVENTUS.SEMI.100.000.000",
+    "endTime": null,
+    "createdOn": "09/29/2021",
+    "inputBatches": [
+     "0212670360"
+    ],
+    "description": "Clean/size sanitized in ENK. double seed",
+    "outputMaterial": "12804616"
+   }, {
+    "PK": "SUM#ENK#initial",
+    "SK": "cky939oq20005hgmpeb546pdb#104342662",
+    "dataPartition": "ENK",
+    "totalOperations": 0,
+    "processOrderType": "ZVCL",
+    "site": "ENK",
+    "state": "initial",
+    "baseQuantity": "15.200",
+    "processOrder": "104342662",
+    "CAT": "SUM",
+    "longText": "Clean/size sanitized in ENK. double seeds batch: 0212722158, GR on STR2",
+    "plant": "1268",
+    "id": "2991260a-68e9-49e8-ab3b-56a9d5836d5b",
+    "prodSchedDesc": "Clean-Size",
+    "orderTemplate": "DEFAULT",
+    "prodSchedCode": "003",
+    "outputMaterialUom": "KG",
+    "inputMaterialUom": "KCS",
+    "REV": "1-cky939oq20005hgmpeb546pdb",
+    "outputBatches": [
+     "0212722155",
+     "0212722156",
+     "0212722157",
+     "0212722158"
+    ],
+    "baseUom": "KG",
+    "completedOperations": 0,
+    "startTime": null,
+    "outputMaterialDesc": "VTW.EVENTUS.SEMI.100.000.000",
+    "endTime": null,
+    "createdOn": "09/29/2021",
+    "inputBatches": [
+     "0212670360"
+    ],
+    "currentOperations": [],
+    "description": "Clean/size sanitized in ENK. double seed",
+    "outputMaterial": "12804616"
+   }]
